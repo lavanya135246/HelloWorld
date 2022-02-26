@@ -12,7 +12,7 @@ pipeline {
         stage('Read demo file')
         {
             steps{
-                cat Telugu
+                sh cat Telugu
             }
         }
     }
