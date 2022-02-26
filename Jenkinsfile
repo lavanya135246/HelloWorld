@@ -6,19 +6,23 @@ pipeline {
             label 'master' 
         } 
     } 
+   
+   parameters {
+        string(name: 'FileName', defaultValue: 'Telugu', description: 'Please enter a file name')
+   }
 
     stages
     {
         stage('Read Telugu')
         {
             steps{
-                sh 'cat Telugu'
+               sh 'cat ${params.FileName}'
             }
         }
        stage('Read Hindi')
         {
             steps{
-                sh 'cat Hindi'
+                sh 'cat ${params.FileName}'
             }
         }
     }
