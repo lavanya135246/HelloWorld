@@ -6,4 +6,14 @@ pipeline {
             label 'master' 
         } 
     } 
+
+    stages
+    {
+        stage('Read demo file')
+        {
+            steps{
+                cat Telugu
+            }
+        }
+    }
 }
