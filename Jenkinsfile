@@ -16,13 +16,13 @@ pipeline {
         stage('Read Telugu')
         {
             steps{
-               sh 'cat ${params.FileName}'
+               sh "cat ${params.FileName}"
             }
         }
        stage('Read Hindi')
         {
             steps{
-                sh 'cat ${params.FileName}'
+                sh "cat ${params.FileName}"
             }
         }
     }
