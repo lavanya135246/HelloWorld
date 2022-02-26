@@ -9,10 +9,16 @@ pipeline {
 
     stages
     {
-        stage('Read demo file')
+        stage('Read Telugu')
         {
             steps{
-                sh cat Telugu
+                sh 'cat Telugu'
+            }
+        }
+       stage('Read Hindi')
+        {
+            steps{
+                sh 'cat Hindi'
             }
         }
     }
