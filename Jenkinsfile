@@ -9,6 +9,7 @@ pipeline {
    
    parameters {
         string(name: 'FileName', defaultValue: 'Telugu', description: 'Please enter a file name')
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
    }
 
     stages
@@ -25,5 +26,11 @@ pipeline {
                 sh "cat ${params.FileName}"
             }
         }
+       stage('Print from choice')
+       {
+          steps{
+             echo "Choice parameter selected is: ${params.CHOICE}"
+          }
+       }
     }
 }
